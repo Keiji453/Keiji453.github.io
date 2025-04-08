@@ -9,6 +9,11 @@ html {
     scroll-behavior: smooth;
 }
 
+section {
+    height: 100vh;
+    width: 100vw;
+}
+
 /* Navigation Bar */
 
 .navbar{
@@ -101,7 +106,7 @@ html {
     background-size: cover;
 }
 
-.main__content {
+/* .main__content {
     position: absolute;
     top: 20vh;
     left: 10vw;
@@ -117,6 +122,24 @@ html {
     font-size: 1.5rem;
     color: whitesmoke;
     text-shadow: 2px 2px 2px black;
+} */
+
+.menu_container {
+    position: fixed;
+    top: 20vh;
+    left: 10vw;
+    z-index: 9999;
+}
+
+.menu_container h1 {
+    font-size: 4rem;
+    color: whitesmoke;
+    text-shadow: 2px 2px 2px black;
+}
+.menu_container h2 {
+    font-size: 1.5rem;
+    color: whitesmoke;
+    text-shadow: 2px 2px 2px black;
 }
 
 .page__links__container {
@@ -128,13 +151,13 @@ html {
     grid-column: 50vw;
 }
 
-.page__links__list {
+/* .page__links__list {
     background-color: transparent;
     margin: 0 9rem;
     padding: 0 3rem;
     width: 75%;
     list-style:disc;
-}
+} */
 
 .page__link {
     display: flex;
@@ -152,11 +175,27 @@ html {
     border: none;
     outline: none;
     background: none;
+    transition: color 0.5s ease, font-weight 0.5s ease;
+}
+
+.link-active {
+    margin-left: 1ch;
+    color: aqua;
 }
 
 .link:hover {
     color: aqua;
     transition: all 0.3s ease;
+}
+
+/* About Section */
+
+.about__container {
+
+}
+
+.about__container {
+
 }
 
 /* Projects Section */
@@ -208,4 +247,12 @@ html {
     padding: 5px;
     border-radius: 10px;
     filter:drop-shadow(0 0 0.75rem black);
+}
+
+.experience {
+    background-color: grey;
+}
+
+.contact {
+    background-color: goldenrod;
 }

@@ -8,12 +8,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script defer src="App.js"></script>
 </head>
 <body>
     <!-- Navigation Bar/Menu -->
     <nav class="navbar"> 
         <div class="navbar__container">
-            <a href="#topOfPage" id="navbar__logo">KATAOKA.</a>
+            <a href="#hero" id="navbar__logo">KATAOKA.</a>
             <div class="navbar_toggle" id="mobile-menu">
             <span class="bar"></span>
             <span class="bar"></span>
@@ -43,32 +45,55 @@
     </nav>
     
     <!-- Title Section -->
-    <div class="main" id = "topOfPage">
+    <section class="main" id = "hero">
         <div class="main__container">
-            <div class="main__content">
-                <h1>Joaquin Kataoka.</h1>
-                <h2>Aspiring Computer Engineering Student.</h2>
-            </div>
-            <!--Add links bar here-->
-            <div class="page__links__container">
-                <ul class="page__links__list">
-                    <li class="page__link">
-                        <a href="#projects" class = "link">
-                            ≫ About (Not Created Yet).
-                        </a>
-                    </li>
-                    <li class="page__link">
-                        <a href="#projects" class = "link">
-                            ≫ Projects (Under Construction!).
-                        </a>
-                    </li>
-                </ul>
+            <div class="menu_container">
+                <div class="menu_header">
+                    <h1>Joaquin Kataoka.</h1>
+                    <h2>Aspiring Computer Engineering Student.</h2>
+                </div>
+                <!--Add links bar here-->
+                <div class="page__links__container">
+                    <ul class="page__links__list">
+                        <li class="page__link">
+                            <a href="#about" class = "link">
+                                ≫ About.
+                            </a>
+                        </li>
+                        <li class="page__link">
+                            <a href="#projects" class = "link">
+                                ≫ Projects.
+                            </a>
+                        </li>
+                        <li class="page__link">
+                            <a href="#experience" class = "link">
+                                ≫ Experience.
+                            </a>
+                        </li>
+                        <li class="page__link">
+                            <a href="#contact" class = "link">
+                                ≫ Contact.
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
-    </div>
+    </section>
+
+    <!-- About section -->
+    <section class="about" id="about">
+        <div class="about__container">
+            <div class="about__contents">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin hendrerit consectetur est at consectetur. Phasellus ut ex urna. Nullam eu erat ex. Proin maximus dolor odio, et varius sapien faucibus a. Fusce vel elit a lectus tempor convallis eget eget diam. Donec viverra velit erat, bibendum egestas turpis dictum sit amet. Pellentesque sollicitudin, diam ac dapibus iaculis, quam lectus faucibus elit, sit amet congue enim neque quis metus. Proin venenatis leo ac est eleifend viverra. Sed volutpat mollis arcu, ac tincidunt sapien lacinia eu. Phasellus ligula purus, aliquet eget luctus a, eleifend vitae odio. Ut accumsan ipsum turpis, fringilla pulvinar.
+                </p>
+            </div>
+        </div>
+    </section>
 
     <!-- Projects Section -->
-    <div class="projects" id = "projects">
+    <section class="projects" id="projects">
         <div class="projects__title__card">
           <h1>Projects.</h1>
         </div>
@@ -82,6 +107,11 @@
             <p>This is miscellaneous text that is being used a place holder for what will be the description of this project. Eventually I want to make these indiviudal project pages so I can give some more insight! <a href="https://github.com/Keiji453/COE528-Group-16-Final-Project" target="_blank">Click for Repo</a></p>
           </div>
         </div>
-    </div>
+    </section>
+
+    <section class="experience" id="experience"></section>
+    <section class="contact" id="contact"></section>
+
+    <!-- <div class="noise"></div> -->
 </body>
 </html>
