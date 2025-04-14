@@ -56,7 +56,7 @@ $(window).on("scroll", () => {
         } else {
             $(relatedMenuLink).removeClass("link-active");
         }
-        console.log({currentId: currentId, isElementVisible: isElementVerticallyInViewport(element[0]) });
+        // console.log({currentId: currentId, isElementVisible: isElementVerticallyInViewport(element[0]) });
     });
 })
 // $(window).on("scroll", throttle((event) => {
