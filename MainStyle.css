@@ -20,7 +20,6 @@ section:nth-child(odd) {
 section {
     height: 100vh;
     width: 100vw;
-    
 }
 
 /* Navigation Bar */
@@ -115,24 +114,6 @@ section {
     background-size: cover;
 }
 
-/* .main__content {
-    position: absolute;
-    top: 20vh;
-    left: 10vw;
-    z-index: 1;
-}
-
-.main__content h1 {
-    font-size: 4rem;
-    color: whitesmoke;
-    text-shadow: 2px 2px 2px black;
-}
-.main__content h2 {
-    font-size: 1.5rem;
-    color: whitesmoke;
-    text-shadow: 2px 2px 2px black;
-} */
-
 .menu_container {
     position: fixed;
     top: 20vh;
@@ -154,26 +135,17 @@ section {
 .page__links__container {
     align-self: last baseline;
     display: grid ;
-    height: 60vh;
-    width: 100vw;
-    grid-template-columns: 1fr 1fr;
-    grid-column: 50vw;
 }
 
-/* .page__links__list {
-    background-color: transparent;
-    margin: 0 9rem;
-    padding: 0 3rem;
-    width: 75%;
-    list-style:disc;
-} */
+.page__links__list {
+    list-style-type: none;
+}
 
 .page__link {
-    display: flex;
+    /* display: flex; */
     justify-content: left;
-    align-items: left;
     padding: 0 1rem;
-    width: 100%;
+    /* width: 100%; */
 }
 
 
@@ -210,13 +182,27 @@ section {
 }
 
 /* About Section */
-
-.about__container {
-
+.about__contents {
+    display: grid;
+    grid-template-columns: 50vw 50vw;
+    height: 100vh;
 }
 
-.about__container {
+.about__flex_container {
+    grid-column-start: 2;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    padding: 5em;
+    justify-content: center;
+}
 
+.about__text_container {
+    background: #7DB3C6;
+    height: 50vh;
+    padding: 2em;
+    border-radius: 2em;
+    box-shadow: 2em 1em;
 }
 
 /* Projects Section */
@@ -255,12 +241,17 @@ section {
     padding: 0;
 }
 
+.projects__container ul {
+    list-style-type: none;
+    grid-column-start: 2;
+}
+
 .project__card {
     display: grid;
     grid-template-rows: 0.25fr 1.75fr;
     justify-items: center;
     z-index: 3;
-    margin: 0 auto;
+    margin: 2em auto;
     height: 20vh;
     background-color: grey;
     width: 100%;
@@ -269,11 +260,3 @@ section {
     border-radius: 10px;
     filter:drop-shadow(0 0 0.75rem black);
 }
-
-/* .experience {
-    background-color: grey;
-}
-
-.contact {
-    background-color: goldenrod;
-} */
