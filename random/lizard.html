@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main-content" id="main-content">
+        <div class="lizard-container" id="lizard-container">
+            <img src="./assets/lizard.gif" alt="Lizard Gif" class="lizard">
+        </div>
+    </div>
+</body>
+<style>
+    .main-content {
+        height: 100vh;
+        width: 100vw;
+        background-color: #0A0A0A;
+    }
+    .lizard-container {
+        background-color: #0A0A0A;
+        display: grid;
+        width: 100%;
+        min-height: 100vh;
+        height: fit-content;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        place-items: center;
+        box-sizing: border-box;
+
+    }
+    .lizard {
+        width: 100%;
+        aspect-ratio: 1 / 1; 
+        max-width: 50vmin;
+    }
+</style>
+<script>
+    const mainDiv = document.getElementById("main-content");
+    const lizardDiv = document.getElementById("lizard-container");
+    let lizardCount = 0;
+    console.log(
+        `Sigh... I'm not even done my website yet, but here are some lizards IG.
+        Nobody even every checks here 🥲
+        `
+    );
+
+    document.body.addEventListener("keydown", function(event) {
+        if (event.key != " ") {
+            return;
+        }
+        let lizardSound = new Audio('./assets/lizard-button.mp3');
+        let newLizardImg = document.createElement('img');
+        let newLizardId = `lizard-gif-${lizardCount++}`
+        newLizardImg.setAttribute("src", "./assets/lizard.gif");
+        newLizardImg.setAttribute("alt", "Lizard Gif");
+        newLizardImg.setAttribute("class", "lizard");
+        newLizardImg.setAttribute("id", newLizardId);
+        lizardDiv.appendChild(newLizardImg);
+        lizardSound.play();
+        // setTimeout(() => {
+        //     const lizardToRemove = document.getElementById(newLizardId);
+        //     lizardToRemove.remove();
+        // }, 900, newLizardId);
+    })
+</script>
+</html>
